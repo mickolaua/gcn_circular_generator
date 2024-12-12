@@ -97,8 +97,7 @@ try {
     for (($i = $maxGCNNum + 1); $i -lt 99999999; $i++) {
         Write-Host "Probing downloading a new circular ${i} ..."
         try {
-            Invoke-WebRequest "$GcnCircularUrl
-    /${i}.json" -OutFile "${i}.json"
+            Invoke-WebRequest "$GcnCircularUrl/${i}.json" -OutFile "${i}.json"
             Write-Host "The circular was downloaded successfully"
         }
         catch {
