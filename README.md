@@ -4,7 +4,8 @@ should be globally accessible via PowerShell. This is done by adding the path to
 `7z` event when error is occured when downloading the circular archive, the script will be able to download all GCN circulars 
 one-by-one, starting from #1. But is it desired to do so?
 
-Just run `.\make_circular_draft.ps1` and enter source name in the prompt (or specify it with `-SOURCE_NAME` option in the PowerShell).
+Just run `.\make_circular_draft.ps1` and enter source name in the prompt (or specify it with `-SourceName` option in the PowerShell).
+Run `Get-Help .\make_circular_draft.ps1` to open the Help on script (this includes list of available options).
 
 The real usage example is shown here:
 
@@ -94,7 +95,7 @@ Date       UT start  t-T0         Exp.    Filter   OT        Err.       UL(3sigm
                      (mid, days)  (s)
 <ISODate>  <HH:MM:SS> <days:.6f>  <n*exp> <Filter> <mag:.2f> <err:.2f>  <ul:.1f>   <Telescope>
 
-The magnitudes were calibrated using nearby stars from <catalog> and are not corrected for the Galactic extinction towards the GRB 241209B
+The magnitudes were calibrated using nearby stars from <catalog> and are not corrected for the Galactic extinction towards the GRB 241209B.
 ```
 
 Notice, there are fields `<days:.6f>` that should be update by hand or another software (e.g. using commands similar to `sed` or regex replacement in PowerShell). Here, after a column sign `:` a floating point precision is specified (like in default Python f-notation).
