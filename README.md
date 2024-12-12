@@ -1,5 +1,10 @@
-This script automaticaly generates the GCN circular draft, which then should be a bit modified by hand (see for fields in <> braces). 
-The citation of latest GCNs is included. Just run `.\make_circular_draft.ps1` and enter source name in the prompt (or specified with `-SOURCE_NAME` option in the PowerShell).
+This script automaticaly generates the GCN circular draft, which then should be a bit modified (see for fields in <> braces). 
+The citation of latest GCNs is included. For a successful run a user needs to install `7z` archiver first. Its executable 
+should be globally accessible via PowerShell. This is done by adding the path to `7z` to `$PATH` variable. However, without 
+`7z` event when error is occured when downloading the circular archive, the script will be able to download all GCN circulars 
+one-by-one, starting from #1. But is it desired to do so?
+
+Just run `.\make_circular_draft.ps1` and enter source name in the prompt (or specify it with `-SOURCE_NAME` option in the PowerShell).
 
 The real usage example is shown here:
 
@@ -65,6 +70,12 @@ Subject: Konus-Wind detection of GRB 241209B
 ID: 38537
 Submitted by: Anna Ridnaia at Ioffe Institute <**>
 Authors: Ridnaia et. al
+
+Results
+--
+Found 8 GCN circulars
+GCN draft is in the gcn_draft_GRB 241209B.txt file.
+Please, fill the fields that were not automatically filled (in <> bracketes).
 ```
 
 The content of the generated GCN circular draft is as follows:
